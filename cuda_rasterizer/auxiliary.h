@@ -163,6 +163,17 @@ __forceinline__ __device__ bool in_frustum(int idx,
 	return true;
 }
 
+__forceinline__ __device__ bool inRectangle(
+	const float2 points_2d,
+	const float* rectangle)
+{
+	if (points_2d.x>=rectangle[0] && points_2d.x<=rectangle[2] && points_2d.y>=rectangle[1] && points_2d.y<=rectangle[3])
+	{
+		return true;
+	}
+	return false;
+}
+
 #define CHECK_CUDA(A, debug) \
 A; if(debug) { \
 auto ret = cudaDeviceSynchronize(); \
