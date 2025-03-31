@@ -1,1 +1,1 @@
-# diff-gaussian-rasterization-with-bbox-mask
+# diff-gaussian-rasterization-with-bb
